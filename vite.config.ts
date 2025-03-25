@@ -13,5 +13,17 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: true
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: Number(process.env.PORT) || 3000,
+    allowedHosts: [
+      'test-task-zr99.onrender.com',
+      'localhost'
+    ]
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 3000
   }
 })
